@@ -1,0 +1,56 @@
+section {
+	position: fixed;
+	z-index: 3;
+	top: 100px;
+	right: 2px;
+	width: 50px;
+}
+
+div.icon {
+	animation: fading 7s;
+	animation-iteration-count: infinite;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px, 2px 2px 5px;
+}
+
+@keyframes fading {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+div.tracks {
+    width: 220px;
+    position: relative;
+    right: -82px;
+    top: 37px;
+}
+
+div.tracks div {
+	transition: right 1s;
+	right: inherit;
+}
+
+div.tracks div:hover {
+	position: relative;
+	right: 70px;
+}
+
+@media screen and (max-width: 850px) {
+	section {
+		top: 190px;
+	}
+}

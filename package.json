@@ -1,0 +1,25 @@
+{
+  "name": "Sambuca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Breyn.net",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^8.1.0",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.9",
+    "nodemailer": "^4.4.1",
+    "passport": "^0.4.0",
+    "xoauth2": "^1.2.0"
+  }
+}

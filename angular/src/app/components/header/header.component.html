@@ -1,0 +1,22 @@
+<header>
+	<nav>
+		<ul>
+			<li routerLinkActive="actived"><a routerLink="accueil">Sambuca</a></li>
+		</ul>
+		<ul [class.btnClicked]="isResponsive" >
+			<li class="responsive" routerLinkActive="actived"><a routerLink="bio">Bio</a></li>
+			<li class="responsive" routerLinkActive="actived"><a routerLink="photos">Photos</a></li>		
+			<li class="dropdown" routerLinkActive="actived">
+				<a>Médias</a>
+				<div class="toggle">					
+					<a routerLinkActive="actived" routerLink="videos"> <span>></span> Vidéos</a>
+					<a routerLinkActive="actived" routerLink="musique"> <span>></span> Musique</a>
+				</div>
+			</li>		
+			<li class="responsive" routerLinkActive="actived"><a routerLink="agenda">Agenda</a></li>
+			<li class="responsive" routerLinkActive="actived"><a routerLink="contact">Contact</a></li>
+			<li class="last"><a href="javascript:void(0);" class="icon" (click)="isResponsive = !isResponsive">&#9776;</a></li>
+		</ul>
+	</nav>
+</header>
+

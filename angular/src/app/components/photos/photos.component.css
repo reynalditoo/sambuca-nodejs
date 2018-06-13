@@ -1,0 +1,25 @@
+.background-img {
+	background-image: url('../../../assets/photos/treize.jpg');
+	min-height: 360vw;
+	/* Le reste du css est dans styles.css */
+}
+
+/* Le css de .content est dans styles.css */
+
+.content > div {
+	width: 50%;
+	padding: 5px;
+}
+.content > div:nth-child(odd) {
+	float: left;
+}
+.content > div:nth-child(even) {
+	float: right;
+}
+
+.content > div > img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px, 2px 2px 5px;
+	cursor: pointer;
+}

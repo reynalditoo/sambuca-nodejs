@@ -1,0 +1,63 @@
+.background-img {
+	background-image: url('../../../assets/photos/cinq.jpg');
+	min-height: 1100px;
+	/* Le reste du css est dans styles.css */
+}
+
+.content ul {
+	list-style-type: none;
+}
+
+.years > div {
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	opacity: .6;
+}
+.years ul {
+	color: #FFFFFF;
+}
+.years a {
+	font-size: 20px;
+}
+.years a:hover {
+	font-style: italic;
+}
+
+.concerts {
+	background-color: white;
+	border-radius: 10px;
+	opacity: .6;
+	padding: 2%;
+}
+.concerts > p {
+	text-align: center;
+	font-size: 40px;
+	margin-top: 50px;
+	font-family: 'Montez', arial;
+}
+.concerts ul li {
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+a {
+	cursor: pointer;
+}
+
+.clicked {
+	background-color: grey;
+}
+
+@media screen and (max-width: 850px) {
+	.concerts ul li {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width: 574px) {
+	.concerts ul li {
+		font-size: 2.4vw;
+	}
+}

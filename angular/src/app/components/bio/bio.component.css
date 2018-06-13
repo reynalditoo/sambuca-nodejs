@@ -1,0 +1,66 @@
+.background-img {
+	background-image: url('../../../assets/compressed/bio.png');
+	min-height: 1200px;
+}
+
+.content {
+	top: 20px;
+}
+.content h2,
+.content > p,
+.content span,
+.content img {
+	opacity: 0;
+	font-family: 'Montez', arial;
+}
+.content > p {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 50px;
+	color: #FFF;
+}
+.content img {
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px, 2px 2px 5px;
+}
+.content h2 {
+	text-align: center;
+	font-size: 45px;
+	color: #FFF;
+}
+
+.duo {
+	position: relative;
+}
+.duo img {
+	width: 100%;
+}
+.duo:hover article {
+	opacity: .8;
+	transition: all 1s;
+}
+.duo article {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 200px;
+	background-color: grey;
+	opacity: 0;
+	padding: 18px;
+	color: #FFF;
+	display: none;
+	overflow: auto;
+}
+
+.collaborateurs {
+	width: 100%;
+	min-height: 300px;
+	margin-top: 75px;
+	margin-right: 0;
+    margin-left: 0;
+}
+.collaborateurs img {
+	width: 100%;
+}

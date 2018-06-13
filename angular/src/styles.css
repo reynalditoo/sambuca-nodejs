@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+em {
+	font-style: normal;
+}
+
+/* RENDRE TOUTES LE SCROLLBARS INVISIBLES */
+/* html {
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  IE 10+
+    overflow: -moz-scrollbars-none;  (Firefox) not working
+}
+
+::-webkit-scrollbar {
+    width: 0px;  remove scrollbar space
+    background: transparent;  optional: just make scrollbar invisible
+}
+optional: show position indicator in red
+::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+} */
+
+.background-img {
+	width: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+    background-position: center; 
+	background-repeat: no-repeat;
+	filter: blur(3px);
+	position: relative;
+}
+.content {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 80%;
+	margin: 50px 10%;
+	min-height: 70%;
+}

@@ -1,0 +1,14 @@
+.background-img {
+	background-image: url('../../../assets/compressed/bio.png');
+	min-height: 800px;
+}
+
+.content {
+	display: flex;
+	justify-content: space-around;
+}
+
+legend {
+	color: #FFF;
+	text-align: center;
+}

@@ -1,0 +1,140 @@
+header {
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 50px;
+}
+
+nav {
+	width: 100%;
+	height: 100%;
+	padding: 13px;
+}
+
+nav > ul:first-child {
+	width: 20%;
+	float: left;
+}
+
+nav > ul:first-child li a {
+	font-family: 'Montez', cursive;
+	font-size: 40px;
+    font-style: italic;
+}
+
+nav > ul:last-child {
+	width: 80%;
+	float: right;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav > ul:last-child li:not(:last-child) {
+	margin-right: 5%;
+	text-transform: uppercase;
+	width: 7%;
+}
+
+/* DROPDOWN */
+li.dropdown div {
+	width: 150%;
+	display: flex;
+	flex-direction: column;
+}
+li.dropdown div a {
+	width: 100%;
+	font-size: 1vw;
+	opacity: .7;
+}
+li.dropdown a {
+	color: #FFF;
+}
+.toggle {
+	opacity: 0;
+}
+li.dropdown:hover .toggle {
+	opacity: 1;
+	transition: all 1s;
+}
+/* .toggle a:hover span {
+	transform: rotate(90deg);
+} */
+
+li {
+	display: inline;
+}
+
+li.actived a {
+	text-decoration: initial;
+	font-weight: bold;
+}
+
+a {
+	cursor: pointer;
+	color: #FFF;
+}
+a:hover {
+	font-weight: bold;
+	text-decoration: initial;
+}
+
+.icon {
+	display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 850px) {
+
+  nav > ul:last-child li:not(:last-child) {   /* devrait pas y avoir :not() mais ne fonctionne pas sans */
+    width: 100%;
+  }
+  
+  /* disparition menu */
+  li.responsive,
+  li.dropdown {
+  	display: none;
+  }
+  /* apparition dropdown button */
+  li a.icon {
+    float: right;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  /* repositionnement menu en tant que dropdown */
+  nav > ul.btnClicked {
+    position: relative;
+    top: 56px;
+    display: flex;
+    flex-direction: column;
+    right: -31px;
+    width: 145px;
+    z-index: 4;
+  }
+  ul.btnClicked .icon {
+    position: absolute;
+    top: -56px;
+  }
+  nav > ul.btnClicked li {
+    display: inherit;
+    width: 100%;
+  }
+
+  /* MEDIAS */
+  .dropdown > a {
+  	font-size: 0;
+  }
+  .toggle {
+  	opacity: 1;
+  }
+  li.dropdown div a {
+  	font-size: 15px;
+  	opacity: 1;
+  	margin-left: -4px;
+  }
+  .toggle span {
+  	font-size: 0;
+  }
+
+}

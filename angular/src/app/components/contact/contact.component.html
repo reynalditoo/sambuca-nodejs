@@ -1,0 +1,74 @@
+<div class="background-img">
+	
+</div>
+<section class="content row">
+	
+	<div class="col-sm-offset-3 col-sm-6 col-12">
+		<form (ngSubmit)="onSubmit()" #f="ngForm">
+		<fieldset>
+			<legend>Nous contacter</legend>
+			<div class="form-group">
+				<input class="form-control" type="text" id="nom-prenom" name="name" placeholder="Votre nom et prénom" ngModel required #name="ngModel">
+			</div>
+			<span class="help-block" *ngIf="!name.valid && name.touched">
+				Merci d'entrer vos noms et prénoms
+			</span>
+			<div class="form-group">
+				<input class="form-control" type="email" id="email" name="email" placeholder="Votre adresse mail" ngModel email required #email="ngModel">
+			</div>
+			<span class="help-block" *ngIf="email.touched && email.pristine">
+				Merci d'entrer une adresse mail
+			</span>
+			<span class="help-block" *ngIf="!email.valid && email.touched && email.dirty">
+				L'email entrée est incorrecte
+			</span>
+			<div class="form-group">
+				<textarea class="form-control" type="text" id="message" name="message" rows="10" placeholder="Votre message..." ngModel required></textarea>
+			</div>
+			<!-- <span class="help-block" *ngIf="!message.valid && message.touched">
+				Merci d'entrer un message
+			</span><br> -->
+			<button class="btn btn-info" type="submit" [disabled]="!f.valid">Envoyer</button> 		
+		</fieldset>
+		</form>
+		
+		<p *ngIf="msgSent" style="display: inline; color: green; font-weight: bold" #isSent>Votre message a bien été envoyé !</p>
+		<p *ngIf="msgNotSent" style="color: red; font-weight: bold" #isNotSent>Oups il y a eu une erreur, votre message n'a pas pu être envoyé..</p>
+	</div>
+
+	<div class="col-sm-5 col-12">
+<!-- 		<form (ngSubmit)="onSubmit()" #f="ngForm">
+<fieldset>
+	<legend>S'inscrire à notre newsletter</legend>
+	<div class="form-group">
+		<input class="form-control" type="text" id="nom-prenom" name="name" placeholder="Votre nom et prénom" ngModel required #name="ngModel">
+	</div>
+	<span class="help-block" *ngIf="!name.valid && name.touched">
+		Merci d'entrer vos noms et prénoms
+	</span>
+	<div class="form-group">
+		<input class="form-control" type="email" id="email" name="email" placeholder="Votre adresse mail" ngModel email required #email="ngModel">
+	</div>
+	<span class="help-block" *ngIf="email.touched && email.pristine">
+		Merci d'entrer une adresse mail
+	</span>
+	<span class="help-block" *ngIf="!email.valid && email.touched && email.dirty">
+		L'email entrée est incorrecte
+	</span>
+	<div class="form-group">
+		<textarea class="form-control" type="text" id="message" name="message" rows="10" placeholder="Votre message..." ngModel required></textarea>
+	</div>
+	<span class="help-block" *ngIf="!message.valid && message.touched">
+		Merci d'entrer un message
+	</span><br>
+	<button class="btn btn-info" type="submit" [disabled]="!f.valid">Envoyer</button> 		
+</fieldset>
+</form>
+
+<p *ngIf="msgSent" style="display: inline; color: green; font-weight: bold" #isSent>Votre message a bien été envoyé !</p>
+<p *ngIf="msgNotSent" style="color: red; font-weight: bold" #isNotSent>Oups il y a eu une erreur, votre message n'a pas pu être envoyé..</p> -->
+
+	</div>
+</section>
+
+<app-footer></app-footer>

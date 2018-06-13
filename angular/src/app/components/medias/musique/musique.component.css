@@ -1,0 +1,11 @@
+.background-img {
+	background-image: url('../../../../assets/photos/quatorze.jpg');
+	height: 1000px;
+	/* Le reste du css est dans styles.css */
+}
+
+/* Le css de .content est dans styles.css */
+
+iframe {
+	box-shadow: 2px 2px 5px, 2px 2px 5px;
+}

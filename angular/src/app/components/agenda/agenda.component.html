@@ -1,0 +1,25 @@
+<div class="background-img">
+	
+</div>
+<div class="row content">
+	<div class="col-md-4 col-12 years">
+		<div [ngStyle]="{'background-color': btn === key ? 'grey' : 'transparent'}" *ngFor="let key of keys">
+			<ul>
+				<li><a (click)="btn = key" [ngStyle]="{'font-weight': btn === key ? 'bold' : 'normal'}"><i class="fas fa-caret-right"></i><!-- <i class="fas fa-caret-down"></i>  --> {{key}}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-8 col-12 concerts">
+		<p *ngIf="btn == null">AGENDA</p>
+		<div *ngFor="let key of keys">
+			<div *ngIf="btn === key">
+				<div *ngFor="let date of dates[key]">
+					<ul>
+						<li> {{date | nextevent}} </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<app-footer></app-footer>
